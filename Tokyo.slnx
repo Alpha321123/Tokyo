@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Tokyo.ApiService/Tokyo.ApiService.csproj" />
+  <Project Path="Tokyo.AppHost/Tokyo.AppHost.csproj" />
+  <Project Path="Tokyo.ServiceDefaults/Tokyo.ServiceDefaults.csproj" />
+  <Project Path="Tokyo.Web/Tokyo.Web.csproj" />
+</Solution>
