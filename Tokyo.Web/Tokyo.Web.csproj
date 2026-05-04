@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Tokyo.ServiceDefaults\Tokyo.ServiceDefaults.csproj" />
-  </ItemGroup>
-
 </Project>
