@@ -2,7 +2,14 @@
 
 /* Reset & Base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #333; background: #fafbfc; transition: all 0.3s ease; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #2d3748;
+  background: #fafbfc;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
 .dark-mode { background: #0f1419; color: #e2e8f0; }
 .dark-mode .day-card { background: #1a202c; border-color: #2d3748; }
 .dark-mode .hero-section { background: linear-gradient(135deg, #2d3748, #4a5568); }
@@ -48,23 +55,56 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line
 .timeline-item { position: relative; margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.5rem; }
 .timeline-item::before { content: ''; position: absolute; left: 1.85rem; top: 0.5rem; width: 12px; height: 12px; background: #4299e1; border-radius: 50%; z-index: 1; transition: background 0.3s; }
 .timeline-item:hover::before { background: #48bb78; transform: scale(1.2); }
-.time { font-size: 1.2rem; font-weight: 700; color: #4299e1; min-width: 5rem; }
-.content h4 { color: #2d3748; margin-bottom: 0.5rem; }
-.content p { margin-bottom: 0.5rem; }
+.time { font-size: 1.4rem; font-weight: 700; color: #4299e1; min-width: 5rem; }
+.content h4 { color: #1a202c; margin-bottom: 0.5rem; font-size: 1.2rem; font-weight: 600; }
+.content p { margin-bottom: 0.5rem; font-size: 1rem; line-height: 1.5; }
 .highlight .content { background: linear-gradient(135deg, #f0fff4, #c6f6d5); padding: 1rem; border-radius: 12px; border-left: 5px solid #48bb78; }
 
 /* Tickets & Tips */
 .tickets-section, .tips-section { padding: 4rem 2rem; background: #f8f9ff; }
-.tickets-grid, .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-.ticket-card { padding: 2rem; background: white; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+.tickets-section h2, .tips-section h2 { text-align: center; margin-bottom: 2rem; font-size: 2.2rem; color: #2d3748; }
+.tickets-grid, .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+.ticket-card { padding: 2rem; background: white; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s; }
+.ticket-card:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
+.ticket-card h3 { color: #2d3748; margin-bottom: 0.5rem; font-size: 1.3rem; }
+.ticket-card p { color: #718096; margin-bottom: 1rem; font-size: 1rem; }
+.ticket-card .price { display: block; font-size: 1.4rem; font-weight: 700; color: #48bb78; }
+.ticket-card.highlight { border: 2px solid #48bb78; background: linear-gradient(135deg, #f0fff4, #ffffff); }
+
+.tip-card { padding: 2rem; background: white; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+.tip-card h4 { color: #2d3748; margin-bottom: 1rem; font-size: 1.3rem; font-weight: 600; }
+.tip-card ul { list-style: none; padding: 0; }
+.tip-card li { padding: 0.5rem 0; border-bottom: 1px solid #e2e8f0; font-size: 1rem; color: #4a5568; }
+.tip-card li:last-child { border-bottom: none; }
 
 /* Responsive */
 @media (max-width: 768px) {
+  body { font-size: 14px; }
+  .hero-title { font-size: clamp(2rem, 8vw, 3rem); }
+  .hero-subtitle { font-size: 1.1rem; }
+  .stat-card { padding: 1.5rem; }
+  .stat-icon { font-size: 2.5rem; }
+  .day-header h2 { font-size: 1.6rem; }
   .timeline::before { left: 1rem; }
-  .timeline-item { flex-direction: column; gap: 1rem; }
+  .timeline-item { flex-direction: column; gap: 1rem; padding-left: 0; }
   .timeline-item::before { left: 0.8rem; }
-  .time { order: -1; }
+  .time { order: -1; font-size: 1.2rem; min-width: auto; }
+  .content h4 { font-size: 1.1rem; }
+  .tickets-grid, .tips-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .ticket-card, .tip-card { padding: 1.5rem; }
   .hero-actions { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-secondary { width: 200px; }
+}
+
+@media (max-width: 480px) {
+  .hero-content { padding: 1rem; }
+  .trip-meta { flex-direction: column; align-items: center; }
+  .meta-item { font-size: 0.9rem; }
+  .stats-grid { grid-template-columns: 1fr; padding: 2rem 1rem; }
+  .toc-list { grid-template-columns: 1fr; }
+  .daily-plans { padding: 1rem 0.5rem; }
+  .day-card { margin-bottom: 2rem; }
+  .timeline { padding: 1rem; }
 }
 
 /* Print Styles */
