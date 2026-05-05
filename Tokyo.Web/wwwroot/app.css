@@ -54,3 +54,47 @@ h1:focus {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+.planner-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.section-card {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.overview-item {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.day-plan {
+    margin-bottom: 2rem;
+}
+
+.time-chart {
+    width: 100%;
+}
+
+.note-card {
+    background-color: #e7f3ff;
+    border-color: #b3d9ff;
+}
