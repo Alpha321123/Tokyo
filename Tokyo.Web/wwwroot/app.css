@@ -99,6 +99,19 @@ h1:focus {
     border-color: #b3d9ff;
 }
 
+.raw-plan {
+    white-space: pre-wrap;
+    background: #f7fbff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e1eef9;
+    max-height: 480px;
+    overflow: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Segoe UI Mono', monospace;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
 .intro-card {
     background: linear-gradient(135deg, #eef6ff 0%, #ffffff 100%);
     border-color: #c6def5;
