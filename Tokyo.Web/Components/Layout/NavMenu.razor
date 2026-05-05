@@ -1,17 +1,18 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">東京旅遊規劃</a>
-    </div>
+﻿<div class="side-nav hidden">
+  <!-- Modern top nav integrated in MainLayout; this is legacy but kept for Blazor structure -->
+  <div class="nav-header">
+    <h3>東京行程</h3>
+  </div>
+  <nav class="nav-list">
+    <a href="#day1">Day 1: 抵達</a>
+    <a href="#day2">Day 2: 東京塔</a>
+    <a href="#day4">Day 4: DisneySea</a>
+    <a href="#tickets">票券總覽</a>
+    <a href="#tips">旅行提示</a>
+  </nav>
 </div>
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
-
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="nav flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill" aria-hidden="true"></span> 首頁 / Home
-            </NavLink>
-        </div>
-    </nav>
-</div>
+<style>
+.hidden { display: none !important; } /* Hide since using top-nav in layout */
+.side-nav { /* Fallback styles if needed */ }
+</style>
