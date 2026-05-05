@@ -11,7 +11,7 @@
 - [x] **Step 6**: Delete `Tokyo.Web/Components/Pages/Index.razor.new`. ✅
 - [ ] **Step 7**: Test: `cd Tokyo.Web && dotnet run`.
 - [ ] **Step 8**: Publish: `dotnet publish -c Release -o ../docs`.
-- [ ] **Step 9**: Git commit/push: `git add . && git commit -m "feat: modern Tokyo trip planner with enhanced features" && git push`.
+
 - [ ] **Step 10**: Complete & demo.
 
 **Next**: Proceed to Step 2-6 (parallel edits). Confirm success before testing.
