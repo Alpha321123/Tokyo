@@ -1,244 +1,216 @@
-﻿@page "/"
+@page "/"
 
 <PageTitle>東京旅行規劃</PageTitle>
 
 <div class="planner-header">
-    <p class="tagline">東京每日旅遊行程範本 – 每天規劃景點、時間表、美食與票券。</p>
+    <h1>東京旅遊行程規劃</h1>
+    <p class="tagline">這是你第一個東京行程範本，已經整合航班、每日行程、交通、景點與票券建議。</p>
 </div>
 
-<section class="section-card">
-    <h2>行程概覽 Itinerary Overview / 旅程概要</h2>
-    <p>以下是東京旅遊每日行程範本，體驗新宿、新宿御苑、淺草寺、晴空塔、表參道、東京塔等經典景點。</p>
+<section class="section-card intro-card">
+    <div class="trip-summary-grid">
+        <div>
+            <h2>行程日期</h2>
+            <p>29/5 - 6/6</p>
+        </div>
+        <div>
+            <h2>出發航班</h2>
+            <p>BNE 布里斯本機場 → NRT 成田國際機場<br />JQ009</p>
+        </div>
+        <div>
+            <h2>回程航班</h2>
+            <p>NRT 成田國際機場 → BNE 布里斯本機場<br />JQ010</p>
+        </div>
+    </div>
+</section>
 
+<section class="section-card">
+    <h2>旅程總覽 Trip Overview / 旅程概要</h2>
     <div class="overview-grid">
         <div class="overview-item">
-            <h3>Day 1: 新宿與上野 (Shinjuku and Ueno / 新宿と上野)</h3>
-            <ul>
-                <li>新宿御苑 (Shinjuku Gyoen / 新宿御苑) - 景點</li>
-                <li>上野公園 (Ueno Park / 上野恩賜公園) - 景點</li>
-                <li>秋葉原 (Akihabara / 秋葉原) - 購物與動漫</li>
-                <li>新宿美食街 (Shinjuku Dining / 新宿グルメ) - 美食</li>
-            </ul>
+            <h3>29/5 — 抵達 & 上野晚餐</h3>
+            <p>抵達成田 T3，前往上野入住，夜訪上野美食。</p>
         </div>
         <div class="overview-item">
-            <h3>Day 2: 淺草與銀座 (Asakusa and Ginza / 浅草と銀座)</h3>
-            <ul>
-                <li>淺草寺 (Asakusa Temple / 浅草寺) - 景點</li>
-                <li>東京晴空塔 (Tokyo Skytree / 東京スカイツリー) - 景點</li>
-                <li>銀座 shopping (Ginza / 銀座) - 購物</li>
-                <li>築地市場 (Tsukiji Market / 築地市場) - 美食</li>
-            </ul>
+            <h3>30/5 — 麻布台 & 東京塔</h3>
+            <p>Tokyo City Flea Market、麻布台之丘、森 JP Tower、東京塔、甜點與晚餐。</p>
         </div>
         <div class="overview-item">
-            <h3>Day 3: 原宿與東京塔 (Harajuku and Tokyo Tower / 原宿と東京タワー)</h3>
-            <ul>
-                <li>明治神宮 (Meiji Shrine / 明治神宮) - 景點</li>
-                <li>原宿竹下通 (Harajuku / 原宿) - 購物與文化</li>
-                <li>表參道 (Omotesando / 表参道) - 購物</li>
-                <li>東京塔 (Tokyo Tower / 東京タワー) - 景點</li>
-            </ul>
+            <h3>31/5 — 自由 / 備用日</h3>
+            <p>保留作為休息或補行程，適合調整節奏。</p>
+        </div>
+        <div class="overview-item">
+            <h3>1/6 — DisneySea</h3>
+            <p>全天東京迪士尼海洋，建議提前購票並提早進園。</p>
+        </div>
+        <div class="overview-item">
+            <h3>2/6 — 淺草、上野、秋葉原</h3>
+            <p>淺草寺小吃、上野商圈、秋葉原電器與動漫探索。</p>
+        </div>
+        <div class="overview-item">
+            <h3>3/6 — 豐洲市場 & 台場</h3>
+            <p>海鮮市場早餐、百合海鷗號、獨角獸鋼彈與海濱公園。</p>
+        </div>
+        <div class="overview-item">
+            <h3>4/6 — 吉祥寺 & 澀谷</h3>
+            <p>吉祥寺散步、雜貨甜點、澀谷與表參道購物。</p>
+        </div>
+        <div class="overview-item">
+            <h3>5/6 — 豪德寺 & 銀座</h3>
+            <p>豪德寺祈福、銀座逛街，選擇性參訪靖國神社。</p>
+        </div>
+        <div class="overview-item">
+            <h3>6/6 — 回程</h3>
+            <p>整理行李，前往成田機場 T3，晚上返航。</p>
         </div>
     </div>
 </section>
 
 <section class="section-card">
-    <h2>每日詳細行程 Daily Itinerary / 每日詳細行程</h2>
+    <h2>每日概覽 Daily Plan / 詳細行程</h2>
 
     <div class="day-plan">
-        <h3>Day 1: 新宿與上野</h3>
-        <table class="time-chart table table-striped">
-            <thead>
-                <tr>
-                    <th>時間 / Time / 時間</th>
-                    <th>活動 / Activity / アクティビティ</th>
-                    <th>地點 / Location / 場所</th>
-                    <th>交通方式 / Transport / 交通</th>
-                    <th>所需時間 / Duration / 所要時間</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>09:00</td>
-                    <td>參觀新宿御苑 (Visit Shinjuku Gyoen / 新宿御苑訪問)</td>
-                    <td>新宿御苑 (Shinjuku Gyoen / 新宿御苑)</td>
-                    <td>地鐵丸ノ内線 (Marunouchi Line / 丸ノ内線)</td>
-                    <td>2 小時</td>
-                </tr>
-                <tr>
-                    <td>12:00</td>
-                    <td>午餐與休息 (Lunch and Rest / 昼食と休憩)</td>
-                    <td>新宿 (Shinjuku / 新宿)</td>
-                    <td>步行 (Walk / 徒歩)</td>
-                    <td>1 小時</td>
-                </tr>
-                <tr>
-                    <td>13:00</td>
-                    <td>參觀上野公園 (Visit Ueno Park / 上野公園訪問)</td>
-                    <td>上野公園 (Ueno Park / 上野恩賜公園)</td>
-                    <td>JR 山手線 (Yamanote Line / 山手線)</td>
-                    <td>1.5 小時</td>
-                </tr>
-                <tr>
-                    <td>15:00</td>
-                    <td>探索秋葉原 (Explore Akihabara / 秋葉原探索)</td>
-                    <td>秋葉原 (Akihabara / 秋葉原)</td>
-                    <td>地鐵日比谷線 (Hibiya Line / 日比谷線)</td>
-                    <td>2 小時</td>
-                </tr>
-                <tr>
-                    <td>18:00</td>
-                    <td>晚餐在新宿 (Dinner in Shinjuku / 新宿で夕食)</td>
-                    <td>新宿 (Shinjuku / 新宿)</td>
-                    <td>地鐵 (Subway / 地下鉄)</td>
-                    <td>2 小時</td>
-                </tr>
-            </tbody>
-        </table>
+        <h3>29/5 — 抵達成田與上野晚餐</h3>
+        <ul class="compact-list">
+            <li><strong>09:30</strong> BNE 布里斯本機場出發，搭乘 JQ009。</li>
+            <li><strong>17:40</strong> 抵達 NRT 成田國際機場 T3。</li>
+            <li>由 <strong>Keisei Skyliner</strong> 或 <strong>JR Narita Express</strong> 前往上野。</li>
+            <li><strong>19:30</strong> 入住上野附近酒店。</li>
+            <li><strong>20:00</strong> 上野晚餐：<em>名代 宇奈とと 上野店</em> 或 <em>廻転寿司 まぐろ問屋 三浦三崎港 上野店</em>。</li>
+        </ul>
     </div>
 
     <div class="day-plan">
-        <h3>Day 2: 淺草與銀座</h3>
-        <table class="time-chart table table-striped">
-            <thead>
-                <tr>
-                    <th>時間 / Time / 時間</th>
-                    <th>活動 / Activity / アクティビティ</th>
-                    <th>地點 / Location / 場所</th>
-                    <th>交通方式 / Transport / 交通</th>
-                    <th>所需時間 / Duration / 所要時間</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>09:00</td>
-                    <td>參觀淺草寺 (Visit Asakusa Temple / 浅草寺訪問)</td>
-                    <td>淺草寺 (Asakusa Temple / 浅草寺)</td>
-                    <td>地鐵銀座線 (Ginza Line / 銀座線)</td>
-                    <td>1.5 小時</td>
-                </tr>
-                <tr>
-                    <td>11:00</td>
-                    <td>散步仲見世通 (Walk Nakamise Street / 仲見世通り散策)</td>
-                    <td>淺草 (Asakusa / 浅草)</td>
-                    <td>步行 (Walk / 徒歩)</td>
-                    <td>1 小時</td>
-                </tr>
-                <tr>
-                    <td>12:30</td>
-                    <td>午餐 (Lunch / 昼食)</td>
-                    <td>淺草 (Asakusa / 浅草)</td>
-                    <td>步行 (Walk / 徒歩)</td>
-                    <td>1 小時</td>
-                </tr>
-                <tr>
-                    <td>14:00</td>
-                    <td>參觀東京晴空塔 (Visit Tokyo Skytree / 東京スカイツリー訪問)</td>
-                    <td>東京晴空塔 (Tokyo Skytree / 東京スカイツリー)</td>
-                    <td>地鐵半藏門線 (Hanzomon Line / 半蔵門線)</td>
-                    <td>2 小時</td>
-                </tr>
-                <tr>
-                    <td>17:00</td>
-                    <td>銀座購物 (Ginza Shopping / 銀座ショッピング)</td>
-                    <td>銀座 (Ginza / 銀座)</td>
-                    <td>地鐵 (Subway / 地下鉄)</td>
-                    <td>2 小時</td>
-                </tr>
-                <tr>
-                    <td>19:30</td>
-                    <td>築地市場晚餐 (Dinner at Tsukiji Market / 築地市場夕食)</td>
-                    <td>築地市場 (Tsukiji Market / 築地市場)</td>
-                    <td>地鐵 (Subway / 地下鉄)</td>
-                    <td>1.5 小時</td>
-                </tr>
-            </tbody>
-        </table>
+        <h3>30/5 — 麻布台、森 JP Tower、東京塔</h3>
+        <ul class="compact-list">
+            <li><strong>09:00</strong> Tokyo City Flea Market。</li>
+            <li><strong>11:00</strong> 前往 <strong>麻布台之丘</strong> / Azabudai Hills。</li>
+            <li><strong>12:00</strong> 餐廳消費：<em>Dining 33</em>、<em>Dining 33 pâtisserie à la maison</em> 或 <em>Sky Room Cafe & Bar</em>。</li>
+            <li><strong>13:00</strong> Sky Lobby 入場（須餐飲消費）。</li>
+            <li><strong>14:30</strong> 參觀 <strong>森 JP Tower</strong>。</li>
+            <li><strong>16:00</strong> 造訪 <strong>東京塔</strong> (Tokyo Tower / 東京タワー)。</li>
+            <li><strong>17:30</strong> 甜點：<em>HARBS</em>、<em>千疋屋總本店</em>、<em>鈴懸</em>。</li>
+            <li><strong>19:30</strong> 晚餐：<em>五代目野田岩本店</em> 或芝公園附近餐廳。</li>
+        </ul>
     </div>
 
     <div class="day-plan">
-        <h3>Day 3: 原宿與東京塔</h3>
-        <table class="time-chart table table-striped">
-            <thead>
-                <tr>
-                    <th>時間 / Time / 時間</th>
-                    <th>活動 / Activity / アクティビティ</th>
-                    <th>地點 / Location / 場所</th>
-                    <th>交通方式 / Transport / 交通</th>
-                    <th>所需時間 / Duration / 所要時間</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>09:30</td>
-                    <td>參觀明治神宮 (Visit Meiji Shrine / 明治神宮訪問)</td>
-                    <td>明治神宮 (Meiji Shrine / 明治神宮)</td>
-                    <td>JR 山手線 (Yamanote Line / 山手線)</td>
-                    <td>1.5 小時</td>
-                </tr>
-                <tr>
-                    <td>11:30</td>
-                    <td>探索原宿竹下通 (Explore Harajuku Takeshita Street / 原宿竹下通り探索)</td>
-                    <td>原宿 (Harajuku / 原宿)</td>
-                    <td>步行 (Walk / 徒歩)</td>
-                    <td>1.5 小時</td>
-                </tr>
-                <tr>
-                    <td>13:30</td>
-                    <td>午餐 (Lunch / 昼食)</td>
-                    <td>原宿 (Harajuku / 原宿)</td>
-                    <td>步行 (Walk / 徒歩)</td>
-                    <td>1 小時</td>
-                </tr>
-                <tr>
-                    <td>15:00</td>
-                    <td>表參道購物 (Omotesando Shopping / 表参道ショッピング)</td>
-                    <td>表參道 (Omotesando / 表参道)</td>
-                    <td>步行 (Walk / 徒歩)</td>
-                    <td>2 小時</td>
-                </tr>
-                <tr>
-                    <td>17:30</td>
-                    <td>參觀東京塔 (Visit Tokyo Tower / 東京タワー訪問)</td>
-                    <td>東京塔 (Tokyo Tower / 東京タワー)</td>
-                    <td>地鐵 (Subway / 地下鉄)</td>
-                    <td>1.5 小時</td>
-                </tr>
-                <tr>
-                    <td>19:30</td>
-                    <td>晚餐 (Dinner / 夕食)</td>
-                    <td>芝公園附近 (Near Shiba Park / 芝公園附近)</td>
-                    <td>步行 (Walk / 徒歩)</td>
-                    <td>1 小時</td>
-                </tr>
-            </tbody>
-        </table>
+        <h3>31/5 — 自由備用日</h3>
+        <p>保留調整節奏，若需要可安排以下任一補強項目：</p>
+        <ul class="compact-list">
+            <li>東京晴空塔 / Tokyo Skytree</li>
+            <li>明治神宮 / Meiji Shrine</li>
+            <li>新宿或池袋購物</li>
+            <li>築地市場再訪</li>
+        </ul>
+    </div>
+
+    <div class="day-plan">
+        <h3>1/6 — Tokyo DisneySea</h3>
+        <ul class="compact-list">
+            <li>全天遊玩 DisneySea。</li>
+            <li>建議開園前抵達並提前購買門票。</li>
+            <li>午餐與晚餐依園區餐廳安排。</li>
+        </ul>
+    </div>
+
+    <div class="day-plan">
+        <h3>2/6 — 淺草、上野、秋葉原</h3>
+        <ul class="compact-list">
+            <li><strong>09:00</strong> 參觀 <strong>浅草寺</strong>。</li>
+            <li>仲見世通品嘗：<em>浅草花月堂 本店</em>、<em>木村家人形焼本舗</em>、<em>Asakusa Menchi</em>、<em>舟和 本店</em>。</li>
+            <li><strong>11:30</strong> 逛 <strong>かっぱ橋道具街</strong>。</li>
+            <li><strong>13:30</strong> 前往 <strong>上野アメ横商店街</strong>。</li>
+            <li>推薦午餐：<em>名代 宇奈とと</em>、<em>廻転寿司 まぐろ問屋</em>、<em>肉の大山</em>、<em>UO KUSA 魚草</em>。</li>
+            <li><strong>16:00</strong> 移動至秋葉原。</li>
+            <li>探索：<em>Bic Camera</em>、<em>Yodobashi Akiba</em>、<em>秋葉原ガチャポン会館</em>、<em>アニメイト秋葉原</em>、<em>秋葉原電気街</em>。</li>
+            <li>可加訪：<em>神田明神</em>、<em>神田萬世橋</em>；晚餐建議 <em>炸牛排壹貳參</em> 或 <em>Roast Beef 大野</em>。</li>
+        </ul>
+    </div>
+
+    <div class="day-plan">
+        <h3>3/6 — 豐洲市場與台場</h3>
+        <ul class="compact-list">
+            <li><strong>08:00</strong> 前往 <strong>豐洲市場</strong>。</li>
+            <li>推薦壽司/海鮮：<em>大和壽司</em>、<em>壽司大</em>、<em>海鮮丼 大江戶</em>、<em>天ぷら天房</em>、<em>牡蠣や粋</em>。</li>
+            <li><strong>12:30</strong> 搭乘 <em>百合海鷗號一日券</em> 前往台場。</li>
+            <li>台場重點：<em>獨角獸鋼彈</em>、<em>DiverCity Tokyo Plaza</em>、<em>台場海濱公園</em>。</li>
+            <li><strong>18:00</strong> 台場或市區晚餐。</li>
+        </ul>
+    </div>
+
+    <div class="day-plan">
+        <h3>4/6 — 吉祥寺與澀谷</h3>
+        <ul class="compact-list">
+            <li><strong>09:30</strong> 吉祥寺漫步。</li>
+            <li>美食：<em>Satou</em> 黑毛和牛炸肉餅、<em>塚田水産</em>、<em>鯛魚燒天音</em>、<em>白鬍子泡芙工房</em>。</li>
+            <li>購物與散步：<em>Can Do</em>、<em>口琴橫丁</em>、<em>中道通</em>、<em>井之頭恩賜公園</em>。</li>
+            <li><strong>15:00</strong> 前往澀谷/表參道。</li>
+            <li>景點：<em>忠犬八公</em>、<em>Shibuya Crossing</em>、<em>澀谷橫丁</em>、<em>表參道Hills</em>、<em>Kiddy Land</em>。</li>
+            <li>推薦：<em>奶油培根烏龍麵</em>、<em>Luke’s Lobster</em>、<em>GARIGUETTE NAPOLEON</em>。</li>
+        </ul>
+    </div>
+
+    <div class="day-plan">
+        <h3>5/6 — 豪德寺與銀座</h3>
+        <ul class="compact-list">
+            <li><strong>09:00</strong> 參拜 <strong>豪德寺</strong>。</li>
+            <li>午餐後前往銀座。</li>
+            <li>逛：<em>GINZA SIX</em>、<em>Muji</em>。</li>
+            <li>如果想體驗傳統氛圍，可選擇前往 <em>靖國神社</em>。</li>
+        </ul>
+    </div>
+
+    <div class="day-plan">
+        <h3>6/6 — 回程</h3>
+        <ul class="compact-list">
+            <li>整理行李，退房並前往成田機場 T3。</li>
+            <li>建議提早出發，預留機場時間。</li>
+            <li><strong>20:50</strong> 成田出發 JQ010。</li>
+            <li><strong>06:45</strong> 抵達 BNE。</li>
+        </ul>
     </div>
 </section>
 
 <section class="section-card">
-    <h2>美食推薦 Food Recommendations / 食べ物おすすめ</h2>
-    <ul>
-        <li>壽司 (Sushi / 寿司) - 新鮮海鮮</li>
-        <li>拉麵 (Ramen / ラーメン) - 經典日本麵食</li>
-        <li>章魚燒 (Takoyaki / たこ焼き) - 街頭小吃</li>
-        <li>抹茶甜點 (Matcha Desserts / 抹茶デザート) - 傳統甜食</li>
-        <li>天婦羅 (Tempura / 天ぷら) - 炸物</li>
-        <li>壽喜燒 (Sukiyaki / すき焼き) - 熱鍋</li>
-    </ul>
-</section>
-
-<section class="section-card">
-    <h2>建議票券 Tickets to Buy / チケット購入</h2>
-    <ul>
-        <li>JR Pass 或 地鐵一日券 (JR Pass or Subway Day Pass / JRパスまたは地下鉄一日券) - 交通</li>
-        <li>東京晴空塔展望台票 (Tokyo Skytree Observation Ticket / 東京スカイツリー展望台チケット) - 景點</li>
-        <li>東京塔門票 (Tokyo Tower Ticket / 東京タワーチケット) - 景點</li>
-        <li>Suica / Pasmo IC 卡 (Suica/Pasmo IC Card / Suica/Pasmo ICカード) - 交通</li>
-        <li>明治神宮免費 (Meiji Shrine Free / 明治神宮無料) - 景點</li>
-    </ul>
+    <h2>美食與推薦 Food & Highlights</h2>
+    <div class="recommend-grid">
+        <div>
+            <h4>淺草小吃</h4>
+            <ul>
+                <li>浅草花月堂 本店</li>
+                <li>木村家人形焼本舗</li>
+                <li>Asakusa Menchi</li>
+                <li>舟和 本店</li>
+            </ul>
+        </div>
+        <div>
+            <h4>秋葉原</h4>
+            <ul>
+                <li>Bic Camera</li>
+                <li>Yodobashi Akiba</li>
+                <li>秋葉原ガチャポン会館</li>
+                <li>アニメイト秋葉原</li>
+            </ul>
+        </div>
+        <div>
+            <h4>台場</h4>
+            <ul>
+                <li>百合海鷗號一日券</li>
+                <li>獨角獸鋼彈</li>
+                <li>DiverCity Tokyo Plaza</li>
+                <li>台場海濱公園</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
 <section class="section-card note-card">
-    <h2>小提醒 Notes / 注意点</h2>
-    <p>此模板適合 3 日東京旅程。建議每天早上先在交通站購買 IC 卡，並在行程中預留時間步行探索每個地點。請注意交通高峰期和天氣變化。</p>
+    <h2>旅程備註 Notes</h2>
+    <ul>
+        <li>麻布台之丘 Sky Lobby 需在指定餐廳消費才能進入。</li>
+        <li>DisneySea、TeamLab Planets、Skytree 建議提前購票。</li>
+        <li>31/5 可安排為備用日，避免行程過於緊湊。</li>
+        <li>回程日請預留充足時間前往成田機場。</li>
+    </ul>
 </section>
