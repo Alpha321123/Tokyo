@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" role="img" aria-label="Day 4 Route: Tokyo DisneySea">
+  <defs>
+    <linearGradient id="grad4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5e7dd"/>
+      <stop offset="100%" stop-color="#ecd2b1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="280" rx="22" fill="url(#grad4)" />
+  <path d="M120 210 C220 170 320 145 400 150 C490 155 590 195 700 165" fill="none" stroke="#c97756" stroke-width="12" stroke-linecap="round" />
+  <circle cx="120" cy="210" r="20" fill="#ff6c4c" />
+  <circle cx="400" cy="150" r="20" fill="#ff6c4c" />
+  <circle cx="700" cy="165" r="20" fill="#ff6c4c" />
+  <text x="120" y="216" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">1</text>
+  <text x="400" y="156" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">2</text>
+  <text x="700" y="171" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">3</text>
+  <rect x="40" y="26" width="380" height="108" rx="18" fill="rgba(255,255,255,0.94)" />
+  <text x="58" y="60" fill="#3d3228" font-size="26" font-weight="800">Day 4</text>
+  <text x="58" y="96" fill="#6f5b4c" font-size="16">Tokyo DisneySea</text>
+</svg>
