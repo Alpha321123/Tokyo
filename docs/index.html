@@ -6,6 +6,7 @@
     <title>東京旅行規劃</title>
     <base href="/Tokyo/" />
     <link href="app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+NBB3t3CkD2lO3bUa5eGZk4X5FLVxv+P2PQz1da70=" crossorigin="" />
   </head>
   <body>
 
@@ -122,7 +123,7 @@
           </div>
           <div class="day-map">
             <div class="map-container">
-                        <img class="map-frame" src="images/day1.svg" alt="Day 1 Route: Narita Airport → Ueno" loading="lazy" />
+                        <div class="leaflet-map" id="map-day-1"></div>
             </div>
           </div>
         </section>
@@ -185,7 +186,7 @@
           </div>
           <div class="day-map">
             <div class="map-container">
-                        <img class="map-frame" src="images/day2.svg" alt="Day 2 Route: Tokyo City Flea Market → Azabudai Hills → Tokyo Tower" loading="lazy" />
+                        <div class="leaflet-map" id="map-day-2"></div>
             </div>
           </div>
         </section>
@@ -246,7 +247,7 @@
           </div>
           <div class="day-map">
             <div class="map-container">
-                        <img class="map-frame" src="images/day3.svg" alt="Day 3 Route: Meiji Shrine → Shinjuku" loading="lazy" />
+                        <div class="leaflet-map" id="map-day-3"></div>
             </div>
           </div>
         </section>
@@ -294,7 +295,7 @@
           </div>
           <div class="day-map">
             <div class="map-container">
-                        <img class="map-frame" src="images/day4.svg" alt="Day 4 Route: Tokyo DisneySea" loading="lazy" />
+                        <div class="leaflet-map" id="map-day-4"></div>
             </div>
           </div>
         </section>
@@ -356,7 +357,7 @@
           </div>
           <div class="day-map">
             <div class="map-container">
-                        <img class="map-frame" src="images/day5.svg" alt="Day 5 Route: Asakusa → Kappabashi → Akihabara" loading="lazy" />
+                        <div class="leaflet-map" id="map-day-5"></div>
             </div>
           </div>
         </section>
@@ -417,7 +418,7 @@
           </div>
           <div class="day-map">
             <div class="map-container">
-                        <img class="map-frame" src="images/day6.svg" alt="Day 6 Route: Toyosu Market → teamLab Planets → Odaiba" loading="lazy" />
+                        <div class="leaflet-map" id="map-day-6"></div>
             </div>
           </div>
         </section>
@@ -466,7 +467,7 @@
           </div>
           <div class="day-map">
             <div class="map-container">
-                        <img class="map-frame" src="images/day7.svg" alt="Day 7 Route: Kichijoji → Shibuya → Omotesando" loading="lazy" />
+                        <div class="leaflet-map" id="map-day-7"></div>
             </div>
           </div>
         </section>
@@ -516,7 +517,7 @@
           </div>
           <div class="day-map">
             <div class="map-container">
-                        <img class="map-frame" src="images/day8.svg" alt="Day 8 Route: Gotokuji Temple → Ginza" loading="lazy" />
+                        <div class="leaflet-map" id="map-day-8"></div>
             </div>
           </div>
         </section>
@@ -565,7 +566,7 @@
           </div>
           <div class="day-map">
             <div class="map-container">
-                        <img class="map-frame" src="images/day9.svg" alt="Day 9 Route: Tsukiji Market / Tokyo Skytree → Narita Airport" loading="lazy" />
+                        <div class="leaflet-map" id="map-day-9"></div>
             </div>
           </div>
         </section>
@@ -698,6 +699,86 @@
         document.body.classList.toggle('dark-mode');
         toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️ 日間模式' : '🌙 夜間模式';
       });
+    </script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j7XpDh9AJW3yoytMyPG3LJk5rrC4vB1hkt7t9CI=" crossorigin=""></script>
+    <script>
+      function createMap(containerId, center, zoom, points) {
+        const map = L.map(containerId, { zoomControl: true, scrollWheelZoom: false }).setView(center, zoom);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; OpenStreetMap contributors',
+          maxZoom: 18
+        }).addTo(map);
+        const latlngs = points.map(p => [p.lat, p.lng]);
+        if (latlngs.length > 1) {
+          L.polyline(latlngs, { color: '#c97756', weight: 6, opacity: 0.8, smoothFactor: 1 }).addTo(map);
+        }
+        points.forEach((point, index) => {
+          const icon = L.divIcon({
+            className: 'map-number-icon',
+            html: '<span>' + (index + 1) + '</span>',
+            iconSize: [32, 32],
+            iconAnchor: [16, 16]
+          });
+          L.marker([point.lat, point.lng], { icon }).addTo(map).bindPopup(point.label);
+        });
+        if (latlngs.length > 1) {
+          map.fitBounds(latlngs, { padding: [40, 40] });
+        }
+      }
+
+      function initMaps() {
+        const configs = [
+          { id: 'map-day-1', center: [35.74, 139.58], zoom: 10, points: [
+            { lat: 35.7719, lng: 140.3929, label: 'Narita Airport' },
+            { lat: 35.7138, lng: 139.7771, label: 'Ueno' }
+          ] },
+          { id: 'map-day-2', center: [35.67, 139.75], zoom: 13, points: [
+            { lat: 35.6734, lng: 139.7728, label: 'Tokyo City Flea Market' },
+            { lat: 35.6580, lng: 139.7457, label: 'Azabudai Hills' },
+            { lat: 35.6586, lng: 139.7454, label: 'Tokyo Tower' }
+          ] },
+          { id: 'map-day-3', center: [35.68, 139.70], zoom: 13, points: [
+            { lat: 35.6764, lng: 139.6993, label: 'Meiji Shrine' },
+            { lat: 35.6690, lng: 139.7024, label: 'Harajuku' },
+            { lat: 35.6895, lng: 139.6917, label: 'Shinjuku' }
+          ] },
+          { id: 'map-day-4', center: [35.633, 139.881], zoom: 13, points: [
+            { lat: 35.6329, lng: 139.8804, label: 'Tokyo DisneySea' }
+          ] },
+          { id: 'map-day-5', center: [35.705, 139.782], zoom: 13, points: [
+            { lat: 35.7148, lng: 139.7967, label: 'Asakusa' },
+            { lat: 35.7110, lng: 139.7925, label: 'Kappabashi' },
+            { lat: 35.6987, lng: 139.7731, label: 'Akihabara' }
+          ] },
+          { id: 'map-day-6', center: [35.63, 139.79], zoom: 13, points: [
+            { lat: 35.6555, lng: 139.7976, label: 'Toyosu Market' },
+            { lat: 35.6251, lng: 139.7929, label: 'teamLab Planets' },
+            { lat: 35.6299, lng: 139.7807, label: 'Odaiba' }
+          ] },
+          { id: 'map-day-7', center: [35.67, 139.64], zoom: 12, points: [
+            { lat: 35.7031, lng: 139.5790, label: 'Kichijoji' },
+            { lat: 35.6580, lng: 139.7017, label: 'Shibuya' },
+            { lat: 35.6657, lng: 139.7120, label: 'Omotesando' }
+          ] },
+          { id: 'map-day-8', center: [35.67, 139.68], zoom: 12, points: [
+            { lat: 35.6603, lng: 139.6084, label: 'Gotokuji Temple' },
+            { lat: 35.6719, lng: 139.7657, label: 'Ginza' },
+            { lat: 35.6812, lng: 139.7671, label: 'Tokyo Station' }
+          ] },
+          { id: 'map-day-9', center: [35.70, 140.08], zoom: 10, points: [
+            { lat: 35.6665, lng: 139.7708, label: 'Tsukiji Market' },
+            { lat: 35.7101, lng: 139.8107, label: 'Tokyo Skytree' },
+            { lat: 35.7719, lng: 140.3929, label: 'Narita Airport' }
+          ] }
+        ];
+        configs.forEach(cfg => {
+          if (document.getElementById(cfg.id)) {
+            createMap(cfg.id, cfg.center, cfg.zoom, cfg.points);
+          }
+        });
+      }
+      window.addEventListener('load', initMaps);
     </script>
 
     <style>
